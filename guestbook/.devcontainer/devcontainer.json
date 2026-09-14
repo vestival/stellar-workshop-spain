@@ -1,0 +1,10 @@
+{
+  "name": "stellar-workshop",
+  "image": "mcr.microsoft.com/devcontainers/rust:1",
+  "postCreateCommand": "rustup target add wasm32v1-none && cargo install --locked stellar-cli",
+  "customizations": {
+    "vscode": {
+      "extensions": ["rust-lang.rust-analyzer"]
+    }
+  }
+}
