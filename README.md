@@ -1,6 +1,6 @@
 # Stellar Workshop Spain
 
-Madrid, Sep 19 2026 & Barcelona, Sep 18 2026.
+Barcelona, Sep 18 2026 & Madrid, Sep 19 2026.
 
 By the end of this session you will have a smart contract deployed on Stellar
 testnet under your own account, an explorer link to prove it, and an AI agent
@@ -89,8 +89,17 @@ bash scripts/deploy-testnet.sh   # creates 3 accounts, deploys, locks, releases
 ```
 
 Details, a function table and four extension challenges: [escrow/README.md](escrow/README.md).
-Build too slow? `escrow/prebuilt/milestone_escrow.wasm` is the same contract
-already compiled; point `stellar contract deploy --wasm` at it.
+
+Build too slow? `prebuilt/milestone_escrow.wasm` is the same contract already
+compiled. Skip `stellar contract build` and deploy that file instead (uses the
+`alice` account from section 2):
+
+```sh
+cd escrow
+stellar contract deploy \
+  --wasm prebuilt/milestone_escrow.wasm \
+  --source alice --network testnet --alias escrow
+```
 
 ## 4. Build with AI
 
@@ -136,7 +145,12 @@ your code and this repo do not. Redeploying takes a minute.
 * Docs: https://developers.stellar.org
 * AI tooling: https://skills.stellar.org
 * Explorer: https://stellar.expert/explorer/testnet
+* Fund a testnet account by hand: https://lab.stellar.org/account/fund
+* Stellar Lab (build and inspect transactions in the browser): https://lab.stellar.org
+* Browser IDE, no installs: https://stellaride.dev
 * Wallet (browser extension): https://freighter.app
+* Stellar Developer Discord: https://discord.gg/st7Mxd58BV
+* Funding after the hackathon (SCF): https://communityfund.stellar.org
 * **HackMeridian, Lisbon, Oct 25-26:** https://www.hackmeridian.com. Travel
   support available, applications close Oct 19. What you deployed today is
   your starting point.
