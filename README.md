@@ -90,15 +90,15 @@ bash scripts/deploy-testnet.sh   # creates 3 accounts, deploys, locks, releases
 
 Details, a function table and four extension challenges: [escrow/README.md](escrow/README.md).
 
-Build too slow? `prebuilt/milestone_escrow.wasm` is the same contract already
-compiled. Skip `stellar contract build` and deploy that file instead (uses the
-`alice` account from section 2):
+The script IS the demo: it builds, deploys, locks 1 XLM in the escrow and has
+the arbiter release it, then prints the contract's explorer link. A bare
+`stellar contract deploy --wasm ...` only does the deploy step: you get an
+address, but no money ever moves, so the explorer shows an empty contract.
+
+Build too slow? Same full demo, no compilation:
 
 ```sh
-# from inside escrow/
-stellar contract deploy \
-  --wasm prebuilt/milestone_escrow.wasm \
-  --source alice --network testnet --alias escrow
+USE_PREBUILT=1 bash scripts/deploy-testnet.sh
 ```
 
 ## 4. Build with AI

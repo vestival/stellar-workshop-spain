@@ -15,12 +15,18 @@ for who in payer payee arbiter; do
   printf '%-8s %s\n' "$who" "$(stellar keys address "$who")"
 done
 
-say "2/6 Building the contract"
-stellar contract build
+if [ "${USE_PREBUILT:-0}" = 1 ]; then
+  say "2/6 Using the prebuilt WASM (skipping the build)"
+  WASM=prebuilt/milestone_escrow.wasm
+else
+  say "2/6 Building the contract"
+  stellar contract build
+  WASM=target/wasm32v1-none/release/milestone_escrow.wasm
+fi
 
 say "3/6 Deploying the contract"
 CONTRACT=$(stellar contract deploy \
-  --wasm target/wasm32v1-none/release/milestone_escrow.wasm \
+  --wasm "$WASM" \
   --source-account payer \
   --network "$NETWORK" \
   --alias escrow)
