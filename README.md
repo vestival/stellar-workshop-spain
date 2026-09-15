@@ -83,7 +83,7 @@ releases it to the payee, and after a deadline the payer can take it back.
 Ten tests and a one-command happy path:
 
 ```sh
-cd escrow
+cd ../escrow    # coming from guestbook/; from the repo root it is: cd escrow
 cargo test
 bash scripts/deploy-testnet.sh   # creates 3 accounts, deploys, locks, releases
 ```
@@ -95,7 +95,7 @@ compiled. Skip `stellar contract build` and deploy that file instead (uses the
 `alice` account from section 2):
 
 ```sh
-cd escrow
+# from inside escrow/
 stellar contract deploy \
   --wasm prebuilt/milestone_escrow.wasm \
   --source alice --network testnet --alias escrow
