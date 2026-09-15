@@ -1,6 +1,6 @@
 # Stellar Workshop Spain
 
-Madrid, Sep 19 2026. Barcelona: date coming.
+Madrid, Sep 19 2026 & Barcelona, Sep 18 2026.
 
 By the end of this session you will have a smart contract deployed on Stellar
 testnet under your own account, an explorer link to prove it, and an AI agent
@@ -9,11 +9,23 @@ nothing: testnet XLM is free and there is no gas token.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/vestival/stellar-workshop-spain)
 
-## 1. Get a machine (2 minutes)
+## 1. Get a machine (5 minutes)
 
-Click the badge above, or **Code > Codespaces > Create codespace on master**.
-The container installs Rust, the `wasm32v1-none` target and the Stellar CLI,
-and pre-builds both contracts. Open a terminal and check:
+Step by step, on GitHub:
+
+1. You need a GitHub account (free). No account? Create one at
+   https://github.com/signup first, then come back here.
+2. Sign in and click the badge above (or the green **Code** button >
+   **Codespaces** tab > **Create codespace on master**).
+3. GitHub shows a "Create a new codespace" page. Change nothing: branch
+   `master`, configuration "Stellar Workshop (Madrid)", 2-core. Press
+   **Create codespace**. It runs on YOUR free monthly quota (120 core hours),
+   not on anyone's card.
+4. Wait. First boot takes a few minutes: the container installs Rust, the
+   `wasm32v1-none` target and the Stellar CLI, and pre-builds both contracts.
+   It is ready when the terminal at the bottom shows a normal prompt.
+
+Then check it worked:
 
 ```sh
 stellar --version
