@@ -9,6 +9,12 @@ nothing: testnet XLM is free and there is no gas token.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/vestival/stellar-workshop-spain)
 
+**Going to a hackathon?** The [hackathon kit](hackathon-kit/) takes you from
+idea to submission. It has a Project & Evidence Canvas to choose what to build
+and prove it, a Demo & Pitch Playbook for a three-minute demo, a Submission
+Checklist, a worked example and the workshop slides, in Word and PDF. Made for
+HackMeridian Lisbon (October 25 and 26, 2026), useful for any Stellar hackathon.
+
 ## 1. Get a machine (5 minutes)
 
 Step by step, on GitHub:
