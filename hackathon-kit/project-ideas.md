@@ -17,10 +17,12 @@ the user, cut the scope, then run it through page 1 of the
    same on any chain, the "why Stellar" line on the Canvas will be weak.
 2. **Check it is not already built.** Search past Stellar hackathons on
    DoraHacks, the [Stellar Community Fund awards](https://communityfund.stellar.org/awards)
-   and [stellar.org/ecosystem](https://stellar.org/ecosystem). The Stellar
-   Scout skill on [skills.stellar.org](https://skills.stellar.org) checks an
-   idea against 2,000+ indexed projects from inside your agent. Already built?
-   Narrow the user or change the angle.
+   and [stellar.org/ecosystem](https://stellar.org/ecosystem). From inside
+   your agent, the Stellar Scout skill on
+   [skills.stellar.org](https://skills.stellar.org) and the Raven MCP server
+   check an idea against ecosystem projects and past hackathon builds.
+   Already built? Narrow the user or change the angle. Every idea below names
+   the closest prior art we found on October 1, 2026.
 3. **Reuse what is live.** Blend, Soroswap, DeFindex, Reflector, Trustless
    Work and OpenZeppelin's Stellar contracts are already deployed and
    documented. Gluing two of them into a product for one user often beats
@@ -36,6 +38,8 @@ the user, cut the scope, then run it through page 1 of the
 - **Demo:** the journey on stage and what the judge can check.
 - **Stellar pieces:** what you use and why it matters.
 - **Make it yours:** a stretch goal or a twist.
+- **Prior art:** the closest existing project or hackathon build, when there
+  is one. Read it before you start.
 - **Track** (Genesis or Scale) · **Difficulty** (1 easy to 3 hard) · **Starts
   from**, when a contract in this repo gives you a head start.
 
@@ -97,6 +101,9 @@ contract or build on theirs, and say which in your README.
   stablecoin through its Stellar Asset Contract.
 - **Make it yours:** add an arbiter for disputes, or a photo checklist whose
   hash is stored at move-in.
+- **Prior art:** SafeTrust, a Stellar hackathon build, escrows deposits for
+  hotels and holiday rentals. Long-term flat rentals, with their deduction
+  negotiation, are the gap.
 - Genesis · 1 · starts from `escrow/` (add a partial split to `release`)
 
 ### 2. Renovation milestones
@@ -142,6 +149,9 @@ contract or build on theirs, and say which in your README.
 - **Stellar pieces:** this is the shape the Stellar Community Fund itself
   uses (tranches tied to MVP, testnet and mainnet), so you can cite it.
 - **Make it yours:** quadratic matching for community-voted projects.
+- **Prior art:** grant platforms such as GrantFox and DeGrant appear among
+  past Stellar hackathon builds. Differ on the funder: a city council or a
+  neighbourhood fund, not crypto grants.
 - Genesis or Scale · 2 · starts from `escrow/`
 
 ### 5. Bounties that pay on merge
@@ -156,8 +166,10 @@ contract or build on theirs, and say which in your README.
   payment land.
 - **Stellar pieces:** escrow contract, a backend signer as arbiter, testnet
   stablecoin.
-- **Make it yours:** split one bounty between several contributors. Trustless
-  Work has an open-source bounty product: check it and differ from it.
+- **Make it yours:** split one bounty between several contributors.
+- **Prior art:** DevAsign automates open-source bounties on Stellar, and
+  Drips runs the Drips Wave bounty program around HackMeridian. Check both
+  and differ from them.
 - Genesis · 2 · starts from `escrow/`
 
 ## Payments and stablecoins
@@ -180,6 +192,9 @@ stablecoins into local currency through the SEP standards.
   contract needed for the payout. Add a contract only if you need rules.
 - **Make it yours:** hold back a retention percentage in a contract until the
   harvest closes.
+- **Prior art:** SDF's [Stellar Disbursement Platform](https://developers.stellar.org/docs/platforms/stellar-disbursement-platform)
+  already makes bulk payments for organizations. Build the cooperative part
+  (deliveries to shares to statements), and consider the platform underneath.
 - Genesis · 1
 
 ### 7. Market stall QR payments
@@ -211,6 +226,10 @@ stablecoins into local currency through the SEP standards.
   deposit and withdrawal, the [Anchor Platform](https://developers.stellar.org/docs/platforms/anchor-platform).
 - **Make it yours:** pick one real corridor and research which anchors serve
   it; that research is evidence for the judges.
+- **Prior art:** remittances are one of the most attempted ideas at Stellar
+  hackathons, with several placed builds. One corridor, one real user and
+  real anchor research are what set yours apart. SEP-31 covers
+  business-to-business corridors; SEP-12 covers the KYC step.
 - Genesis · 3
 
 ### 9. Small team payroll in stablecoins
@@ -225,6 +244,9 @@ stablecoins into local currency through the SEP standards.
 - **Stellar pieces:** contract math on ledger sequence, per-user persistent
   storage, a stablecoin.
 - **Make it yours:** payslips as signed PDFs with the transaction hash.
+- **Prior art:** payroll products already on Stellar include PayZoll and
+  Bloccpay, and Drips does continuous payment streams. Pick a team type they
+  do not serve.
 - Genesis or Scale · 2
 
 ### 10. Shared flat settle-up
@@ -264,10 +286,15 @@ something an agent pays for to finish a real task.
   402 with a price; an agent pays and gets the data.
 - **Demo:** the agent hits the endpoint, receives 402, pays, gets the answer.
   Show the payment on the explorer.
-- **Stellar pieces:** x402 with a facilitator, stablecoin settlement in
-  seconds at fractions of a cent.
+- **Stellar pieces:** x402 with a facilitator (the x402.org one needs no
+  key), USDC through its Stellar Asset Contract. The paying client needs no
+  XLM because the facilitator sponsors fees.
 - **Make it yours:** the data matters more than the paywall. Pick a dataset
   you can explain in one sentence.
+- **Prior art:** x402 paywalls and paid MCP templates are among the most
+  common Stellar hackathon builds, so the paywall alone will not stand out.
+  An open SCF request for proposals asks for an x402 facilitator with
+  discovery, if you want the infrastructure angle instead.
 - Genesis · 2
 
 ### 12. Agent wallet with a budget
@@ -280,8 +307,10 @@ something an agent pays for to finish a real task.
 - **Demo:** one valid payment goes through; an overspend is rejected by the
   contract on stage.
 - **Stellar pieces:** smart account policies, spending-limit policy from the
-  Smart Account Kit. Eunomia's Bounded Agent Treasury skill does something
-  close: read it and differ.
+  Smart Account Kit.
+- **Prior art:** crowded. Eunomia's Bounded Agent Treasury skill, Policywright
+  and REAPP all work on agent spending rules, and SpendGuard and AgentCard
+  were hackathon builds. Win on one concrete buyer, not on the policy engine.
 - **Make it yours:** a human approval step above a threshold, sent to the
   owner's phone.
 - Genesis · 2
@@ -296,7 +325,8 @@ something an agent pays for to finish a real task.
   unit consumed, and the channel settles on-chain once.
 - **Demo:** run a job that consumes 200 units, show the running count, close
   the session, show one settlement transaction.
-- **Stellar pieces:** MPP session mode, Soroban, a stablecoin.
+- **Stellar pieces:** MPP session mode, which needs its channel contract
+  deployed first and a client with XLM for fees, plus USDC.
 - **Make it yours:** let the client cap the session in advance.
 - Scale · 3
 
@@ -319,9 +349,12 @@ Smart accounts are one of HackMeridian 2026's stated priorities. A smart
 account is a contract that acts as a wallet, with its own rules: passkeys
 instead of seed phrases, several signers, spending policies, sponsored fees.
 The [Smart Account Kit](https://github.com/stellar/smart-account-kit)
-(TypeScript, built on OpenZeppelin's Stellar accounts) gives you passkeys,
-multi-signer setups, policies and fee sponsorship, with a demo app. It is
-pre-1.0, which is fine on testnet.
+(TypeScript, built on OpenZeppelin's audited Stellar accounts) gives you
+passkeys, multi-signer setups, context rules and policies, with a demo app.
+It is pre-1.0, which is fine on testnet. Fees are sponsored through the
+OpenZeppelin Relayer, which replaced the deprecated Launchtube. Passkey Kit is
+a sibling SDK with a simpler signer model; the two are not interchangeable,
+so pick one before you start.
 
 ### 15. Passkey wallet for first-time users
 
@@ -333,8 +366,10 @@ pre-1.0, which is fine on testnet.
   send it on. Fees sponsored by the app.
 - **Demo:** a new user, a phone, no extension, a payment received in under a
   minute.
-- **Stellar pieces:** passkeys (secp256r1) verified on-chain, a relayer for
-  fee sponsorship.
+- **Stellar pieces:** passkeys (secp256r1) verified on-chain, the
+  OpenZeppelin Relayer for fee sponsorship.
+- **Prior art:** passkey wallets are a frequent hackathon build, with a few
+  placed ones. The first use you pick is the differentiator, not the wallet.
 - **Make it yours:** pick a real first use: a freelancer's first invoice, a
   student's first scholarship payment.
 - Genesis · 2
@@ -362,8 +397,9 @@ pre-1.0, which is fine on testnet.
   to one contract and one amount. Actions inside the limit need no pop-up.
 - **Demo:** approve once, take ten actions, then show an action outside the
   limit being rejected.
-- **Stellar pieces:** a context-scoped signer with an expiry on a smart
-  account.
+- **Stellar pieces:** an OpenZeppelin context rule scoped to one contract
+  (`CallContract`) with a `Valid Until` ledger, so the permission expires on
+  its own.
 - **Make it yours:** show the session's remaining budget live on screen.
 - Genesis · 2
 
@@ -384,11 +420,14 @@ pre-1.0, which is fine on testnet.
 
 ## Cross-chain
 
-Cross-chain transfers are the third HackMeridian 2026 priority. Circle's CCTP
-went live on Stellar in May 2026, so native USDC moves between Stellar and
-other CCTP chains by burn and mint, with no wrapped token. Allbridge also
-connects Stellar to other chains. Check testnet support for whatever you pick
-before you plan the demo around it, and label any simulated step.
+Cross-chain transfers are the third HackMeridian 2026 priority. The official
+Cross Chain skill covers four rails: Circle's CCTP V2 for native USDC by burn
+and mint (live on Stellar since May 2026), Axelar for messages and
+interchain tokens, LayerZero for USDT0, and NEAR Intents for swaps from any
+chain. Allbridge has its own SDK skill. Three traps catch most teams: USDC has
+7 decimals on Stellar and 6 everywhere else, a `G...` recipient needs a USDC
+trustline before funds can land, and NEAR Intents and USDT0 have no testnet.
+CCTP does run on testnet, with test USDC from faucet.circle.com.
 
 ### 19. Pay from any chain, get paid on Stellar
 
@@ -398,7 +437,10 @@ before you plan the demo around it, and label any simulated step.
 - **Build:** a payment link. The client pays USDC on their chain; it arrives
   on Stellar through CCTP and lands in the freelancer's account.
 - **Demo:** pay on a testnet of another CCTP chain, show the mint on Stellar.
-- **Stellar pieces:** CCTP, native USDC, an anchor for the next step.
+- **Stellar pieces:** CCTP with the `CctpForwarder` contract, which every
+  Stellar recipient needs, native USDC, an anchor for the next step. Start
+  from [ElliotFriend/stellar-cctp-demo](https://github.com/ElliotFriend/stellar-cctp-demo),
+  which bridges testnet USDC between Stellar, Base Sepolia, Arc and Solana.
 - **Make it yours:** route the arriving USDC straight into an escrow (idea 2).
 - Scale · 3
 
@@ -414,6 +456,9 @@ before you plan the demo around it, and label any simulated step.
 - **Stellar pieces:** CCTP, a settlement contract, SEP-7 or a wallet kit on
   the buyer side.
 - **Make it yours:** automatic refunds to the chain the buyer paid from.
+- **Prior art:** Rozo Intent Pay already ships a pay-from-any-chain button
+  for Stellar merchants. Differ on the merchant side: settlement, reporting,
+  refunds.
 - Scale · 3
 
 ## Composability and tokenized assets
@@ -462,8 +507,11 @@ for one user is a product.
 - **Demo:** issue, fund, settle, with all three steps on the explorer.
 - **Stellar pieces:** a Stellar asset or contract token per invoice,
   stablecoin settlement, the Stellar Asset Contract.
-- **Make it yours:** this is close to The Simple Fund, a past winner. Differ
-  on the user (one sector, one country) and say so.
+- **Make it yours:** price the discount from the customer's on-chain payment
+  history.
+- **Prior art:** close to The Simple Fund, a past winner, and to
+  InvoiceMate's DeFa on Stellar. Differ on the user (one sector, one country)
+  and say so.
 - Scale · 3
 
 ### 24. Pay a euro price in USDC
@@ -475,8 +523,9 @@ for one user is a product.
   payment time and checks the amount paid matches the euro price.
 - **Demo:** issue a 100 EUR invoice, pay it in USDC, show the rate used and the
   contract accepting the payment. Underpay and show the rejection.
-- **Stellar pieces:** Reflector (also Band, DIA and Pyth list Stellar
-  support), a stablecoin, contract errors.
+- **Stellar pieces:** Reflector, whose feeds include foreign exchange rates
+  (Band, DIA and Pyth also list Stellar support), a stablecoin, contract
+  errors.
 - **Make it yours:** settle in EURC when the payer has it.
 - Genesis · 2 · starts from `escrow/`
 
@@ -486,8 +535,9 @@ for one user is a product.
   interface.
 - **Problem:** powerful protocols are often hard to use for the first time.
 - **Build:** pick one protocol and one task (open a Soroswap position,
-  create a DeFindex vault, set up a Blend pool) and make it a three-step
-  guided flow.
+  create a DeFindex vault, borrow against a Blend position) and make it a
+  three-step guided flow. Blend pool creation already has its winner, Blend
+  Pool Creator, so do not repeat it.
 - **Demo:** a non-expert completes the task on stage in under a minute.
 - **Stellar pieces:** the protocol's own SDK or skill.
 - **Make it yours:** ask the protocol team on site what their users get
@@ -503,8 +553,9 @@ met, and those are the openings.
 ### 26. Rent and TTL watchdog
 
 - **For:** teams with contracts on testnet or mainnet.
-- **Problem:** Soroban state has a time to live. When it lapses, entries are
-  archived and the app breaks in a way EVM developers do not expect.
+- **Problem:** Soroban state has a time to live. When it lapses, temporary
+  entries are deleted and persistent ones are archived until someone restores
+  them, and the app breaks in a way EVM developers do not expect.
 - **Build:** a service that watches a list of contracts, reports each
   ledger entry's remaining TTL and extends it before it lapses.
 - **Demo:** a contract with a short TTL, the alert, the automatic extension
@@ -512,6 +563,8 @@ met, and those are the openings.
 - **Stellar pieces:** RPC `getLedgerEntries`, `extend_ttl`, the rent model.
 - **Make it yours:** a cost forecast: what keeping this contract alive costs
   per year.
+- **Prior art:** small scripts exist (luanlabs/stellar-extend-entry-ttl). A
+  watching service with alerts is still open.
 - Genesis · 2
 
 ### 27. Contract cost report in CI
@@ -524,6 +577,8 @@ met, and those are the openings.
 - **Demo:** open a pull request with a costly change and show the comment.
 - **Stellar pieces:** transaction simulation through RPC, resource fees.
 - **Make it yours:** fail the build above a threshold the team sets.
+- **Prior art:** soroban-cost-linter checks costs statically and SoroScope
+  visualizes them. The per-pull-request diff is the gap.
 - Genesis · 2
 
 ### 28. Testnet reset survival kit
@@ -537,6 +592,7 @@ met, and those are the openings.
 - **Demo:** delete everything, run the command, the app works again.
 - **Stellar pieces:** Stellar CLI, Friendbot, contract aliases.
 - **Make it yours:** a GitHub Action that runs it after every reset.
+- **Prior art:** we found no hackathon build that does this.
 - Genesis · 1 · try it on `guestbook/`
 
 ## Public goods and ZK
@@ -550,8 +606,12 @@ met, and those are the openings.
   allowlist. Shops cash out; the funder sees spending by category.
 - **Demo:** issue vouchers, a recipient pays an approved shop, a payment to a
   non-approved address is rejected.
-- **Stellar pieces:** a restricted asset or a contract with an allowlist,
-  stablecoin backing. Aid disbursement is an established Stellar use case.
+- **Stellar pieces:** an asset with `AUTH_REQUIRED` (the issuer approves who
+  may hold it) and clawback, or a contract with an allowlist, plus stablecoin
+  backing.
+- **Prior art:** SDF's Stellar Disbursement Platform already runs aid
+  payouts, and AidShield and AidOS were hackathon builds. The shop-side
+  restriction is the angle.
 - **Make it yours:** an offline-friendly flow for recipients without
   smartphones.
 - Genesis · 2
@@ -565,9 +625,14 @@ met, and those are the openings.
 - **Build:** a user generates a zero-knowledge proof of one fact off-chain; a
   contract verifies it and grants access.
 - **Demo:** a valid proof unlocks the action, a forged one is rejected.
-- **Stellar pieces:** on-chain Groth16 or UltraHonk verification (BLS12-381,
-  BN254); the official ZK Proofs skill covers both.
+- **Stellar pieces:** Groth16 verifies with a small contract on BLS12-381 or
+  BN254; Noir's UltraHonk needs a dedicated verifier contract (Protocol 26
+  and later). The official ZK Proofs skill walks through Circom, Noir and
+  RISC Zero.
 - **Make it yours:** keep the circuit small. One fact, done well.
+- **Prior art:** crowded. The Stellar Hacks: Real-World ZK event produced
+  dozens of privacy builds, ProofPass among them for age checks. Pick a fact
+  nobody has proved yet.
 - Scale · 3
 
 ## Ideas to think twice about
@@ -575,8 +640,11 @@ met, and those are the openings.
 These are not banned, but each needs a strong answer to "why this, why
 Stellar, why you":
 
-- **Agent registries and directories.** Already built many times at Stellar
-  events.
+- **Agent registries and directories.** SDF counted four or five near
+  identical registries at a single hackathon.
+- **Another x402 paywall, agent spending guard or ZK private payment.** All
+  three are now common at Stellar hackathons; each needs a sharp user to
+  stand out.
 - **DEX or AMM clones.** Soroswap, Aquarius, Phoenix and the native DEX exist.
   Build on them instead.
 - **NFT marketplaces and collectible drops.** Stellar's strengths are
@@ -607,10 +675,17 @@ Stellar, why you":
 - [Stellar Builder Summit São Paulo, Aug 13 2026](https://developers.stellar.org/meetings/2026/08/13)
 - [SDF developer meeting, Apr 23 2026](https://developers.stellar.org/meetings/2026/04/23) (agent registries)
 - [Agentic payments, Stellar docs](https://developers.stellar.org/docs/build/agentic-payments)
-- [Stellar skills directory](https://skills.stellar.org/)
+- [Stellar skills directory](https://skills.stellar.org/) and the official
+  [stellar-dev-skill](https://github.com/stellar/stellar-dev-skill)
+  (agentic payments, cross-chain, dApp, ZK)
+- [OpenZeppelin context rules](https://docs.openzeppelin.com/stellar-contracts/accounts/context-rules)
+- [Stellar Disbursement Platform, Stellar docs](https://developers.stellar.org/docs/platforms/stellar-disbursement-platform)
+- [SEP-7, Stellar docs](https://developers.stellar.org/docs/build/apps/wallet/sep7)
+- [State archival, Stellar docs](https://developers.stellar.org/docs/learn/fundamentals/contract-development/storage/state-archival)
+- Prior art: Stellar Light Scout (hackathon builds, projects, RFPs) and
+  LumenLoop, queried through the Raven MCP server on October 1, 2026
 - [Smart Account Kit](https://github.com/stellar/smart-account-kit)
 - [Circle CCTP is live on Stellar](https://stellar.org/blog/foundation-news/circle-cctp-is-live-on-stellar)
-- [Allbridge launch on Stellar](https://stellar.org/press/allbridge-launch-connects-stellar-network-to-ethereum-solana-and-polygon)
 - [Oracle providers, Stellar docs](https://developers.stellar.org/docs/data/oracles/oracle-providers)
 - [Anchor Platform, Stellar docs](https://developers.stellar.org/docs/platforms/anchor-platform)
 - [Fees, resource limits and metering, Stellar docs](https://developers.stellar.org/docs/learn/fundamentals/fees-resource-limits-metering)
