@@ -14,6 +14,9 @@ Stellar hackathon. You can use it without having attended the workshop.
 | Submission Checklist | Everything to check before you press submit | 1 | [PDF](03-submission-checklist.pdf) · [Word](03-submission-checklist.docx) |
 | Worked example (hypothetical) | All three documents filled in for Tramo, an invented milestone-payment app for freelance translators | 3 | [PDF](04-worked-example-tramo-hypothetical.pdf) · [Word](04-worked-example-tramo-hypothetical.docx) |
 
+No idea yet? Start with the [project ideas](project-ideas.md): thirty starting
+points, each with a user, a two-day scope and a verifiable demo.
+
 Workshop slides: [From Idea to Submission (PDF)](deck/from-idea-to-submission.pdf)
 
 To download a file, open it and use the download button at the top right of

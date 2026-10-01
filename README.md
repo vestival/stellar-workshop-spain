@@ -15,6 +15,9 @@ and prove it, a Demo & Pitch Playbook for a three-minute demo, a Submission
 Checklist, a worked example and the workshop slides, in Word and PDF. Made for
 HackMeridian Lisbon (October 25 and 26, 2026), useful for any Stellar hackathon.
 
+**No idea yet?** [Thirty project ideas](hackathon-kit/project-ideas.md), each
+with a user, a two-day scope and a demo a judge can verify.
+
 ## 1. Get a machine (5 minutes)
 
 Step by step, on GitHub:
