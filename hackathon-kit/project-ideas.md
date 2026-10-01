@@ -43,7 +43,7 @@ the user, cut the scope, then run it through page 1 of the
 
 | # | Idea | Category | Track | Difficulty | Starts from |
 |---|---|---|---|---|---|
-| 1 | Fianza: rental deposits that come back | Escrow | Genesis | 1 | `escrow/` |
+| 1 | Rental deposits that come back | Escrow | Genesis | 1 | `escrow/` |
 | 2 | Renovation milestones | Escrow | Genesis | 2 | `escrow/` |
 | 3 | No-show deposits for events | Escrow | Genesis | 1 | `escrow/` |
 | 4 | Grants in tranches | Escrow | Genesis or Scale | 2 | `escrow/` |
@@ -74,8 +74,6 @@ the user, cut the scope, then run it through page 1 of the
 | 29 | Aid vouchers for approved shops | Public goods | Genesis | 2 | |
 | 30 | Prove a fact without revealing it | ZK | Scale | 3 | |
 
----
-
 ## Escrow and milestone payments
 
 The [`escrow/`](../escrow/) contract in this repo already locks funds, lets an
@@ -84,7 +82,7 @@ it. Trustless Work runs escrow infrastructure in production on Stellar, with a
 skill and a React library: decide early whether you extend this repo's
 contract or build on theirs, and say which in your README.
 
-### 1. Fianza: rental deposits that come back
+### 1. Rental deposits that come back
 
 - **For:** tenants and small landlords renting flats in Spain.
 - **Problem:** the deposit sits with the landlord for weeks after move-out,
@@ -103,7 +101,7 @@ contract or build on theirs, and say which in your README.
 
 ### 2. Renovation milestones
 
-- **For:** homeowners paying a contractor for a reform in stages.
+- **For:** homeowners paying a contractor for a renovation in stages.
 - **Problem:** payments in advance leave the owner exposed; payments after
   completion leave the contractor exposed. Both sides distrust the other.
 - **Build:** a multi-milestone escrow. The owner funds the whole budget, the
@@ -161,8 +159,6 @@ contract or build on theirs, and say which in your README.
 - **Make it yours:** split one bounty between several contributors. Trustless
   Work has an open-source bounty product: check it and differ from it.
 - Genesis · 2 · starts from `escrow/`
-
----
 
 ## Payments and stablecoins
 
@@ -246,8 +242,6 @@ stablecoins into local currency through the SEP standards.
   on the other.
 - Genesis · 1
 
----
-
 ## Agent payments
 
 AI agents need to pay for things without accounts or API keys. On Stellar two
@@ -319,8 +313,6 @@ something an agent pays for to finish a real task.
 - **Make it yours:** reputation from completed tasks stored on-chain.
 - Genesis · 2 · starts from `escrow/`
 
----
-
 ## Smart accounts and onboarding
 
 Smart accounts are one of HackMeridian 2026's stated priorities. A smart
@@ -349,7 +341,7 @@ pre-1.0, which is fine on testnet.
 
 ### 16. Shared account for a residents' association
 
-- **For:** a comunidad de vecinos, a club or a parents' association.
+- **For:** a homeowners' association, a club or a parents' association.
 - **Problem:** one treasurer holds the bank access and everyone else has to
   trust the spreadsheet.
 - **Build:** a shared smart account. Small payments need one signer; anything
@@ -390,8 +382,6 @@ pre-1.0, which is fine on testnet.
 - **Make it yours:** recovery through a trusted institution as one guardian.
 - Scale · 3
 
----
-
 ## Cross-chain
 
 Cross-chain transfers are the third HackMeridian 2026 priority. Circle's CCTP
@@ -425,8 +415,6 @@ before you plan the demo around it, and label any simulated step.
   the buyer side.
 - **Make it yours:** automatic refunds to the chain the buyer paid from.
 - Scale · 3
-
----
 
 ## Composability and tokenized assets
 
@@ -506,8 +494,6 @@ for one user is a product.
   stuck on. That conversation is evidence.
 - Genesis · 2
 
----
-
 ## Developer tooling
 
 Sharp tools that remove one known pain won the Dev Tooling track at the
@@ -553,8 +539,6 @@ met, and those are the openings.
 - **Make it yours:** a GitHub Action that runs it after every reset.
 - Genesis · 1 · try it on `guestbook/`
 
----
-
 ## Public goods and ZK
 
 ### 29. Aid vouchers for approved shops
@@ -585,8 +569,6 @@ met, and those are the openings.
   BN254); the official ZK Proofs skill covers both.
 - **Make it yours:** keep the circuit small. One fact, done well.
 - Scale · 3
-
----
 
 ## Ideas to think twice about
 
